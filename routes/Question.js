@@ -1,7 +1,7 @@
 // routes/questions.js
 const express = require('express');
 const router = express.Router();
-const Question = require('../Models/Question');
+const Question = require('../models/Question');
 
 // Create a new question
 router.post('/add', async (req, res) => {
