@@ -17,10 +17,11 @@ require('dotenv').config();
 
 const app = express();
 
-
+app.use(cors());
 app.use(cors({
-  origin: 'https://localhost:3000'
+  origin:['http://localhost:3000', 'https://quiz-portal-12.netlify.app']
 }));
+
 app.get('/', async (req, res) => {
    connectToDatabase();
   res.status(200).json({ message: 'hello world' });
